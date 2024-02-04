@@ -69,18 +69,27 @@ alert(saludo)
 //DOM VINCULAR BY ID
 const btn = document.getElementById("btn");
 const container = document.querySelector("#container");
+const inputCorreo = document.querySelector("#correo");
+const botonEnviar = document.querySelector("#boton");
 //EVENTO CLICK
 btn.addEventListener("click", function () {
-  let nombre = prompt("nombre:");
-  let tarea = prompt("tarea:");
+  let nombre = prompt("Nombre:");
+  let apuesta = prompt("Cantidad a apostar US$:");
+  let equipo = prompt ("Equipo Ganador:")
 
   const newCard = document.createElement("div");
 
   newCard.classList.add("card");
   newCard.innerHTML = `
-    <h2>Nueva Tarea para: ${nombre}</h2>
-    <p>${tarea}</p>
+    <h2>Nueva Apuesta de: ${nombre}</h2>
+    <p>$USD ${apuesta} a que ${equipo} ganará </p>
     `;
 
   container.appendChild(newCard);
 });
+//LOCAL STORAGE
+function guardarFormulario(){
+    localStorage.setItem("correo", inputCorreo.value)
+}
+botonEnviar.addEventListener("click",guardarFormulario)
+
