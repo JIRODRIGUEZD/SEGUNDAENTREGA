@@ -48,7 +48,7 @@ boton.addEventListener("click", saludar)
 
 
 LOCAL STORAGE
-HAY 4 MEOTODOS PARA EL STORAGE
+HAY 4 METODOS PARA EL STORAGE
 
 setItem() permitir crear una clave y asignarle un valor
 getItem() permite recuperar o traer una clave desde el storage
